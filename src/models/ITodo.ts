@@ -1,9 +1,9 @@
 export interface ITodo{
-    id:number,
+    id:string,
     name:string,
     createdAt:number,
     category:string,
     content:string,
-    dates:number,
+    dates:string[],
     isArchive:boolean
 }

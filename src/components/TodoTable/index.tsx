@@ -3,9 +3,11 @@ import {useAppSelector} from "../../hooks/useAppSelector";
 import {ITodo} from "../../models/ITodo";
 import TodoTableRaw from "../TodoTableRaw";
 
+interface TodoTableProps{
+    archiveTable:boolean
+}
 
-
-const TodoTable:React.FC = () => {
+const TodoTable:React.FC<TodoTableProps> = ({archiveTable}) => {
     const todos = useAppSelector(state => state.todos.todos)
     return (
 
@@ -25,9 +27,13 @@ const TodoTable:React.FC = () => {
 
             </thead>
             <tbody>
-                {todos.map((elem)=>(
-                    <TodoTableRaw key={elem.id} todo={elem}/>
-                ))}
+            {
+                todos.filter((todo:ITodo)=>{return todo.isArchive===archiveTable}).map((todo:ITodo)=> {
+                    return(
+                        <TodoTableRaw todo={todo} key={todo.id}/>
+                    )
+                })
+            }
             </tbody>
         </table>
     );

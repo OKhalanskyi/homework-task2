@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
 import TodoTable from "./components/TodoTable";
+import TodoForm from "./components/TodoForm";
 
 function App() {
   return (
     <div className="App">
-      <TodoTable/>
+      <TodoTable archiveTable={false}/>
+      <TodoTable archiveTable={true}/>
+        <TodoForm/>
     </div>
   );
 }
