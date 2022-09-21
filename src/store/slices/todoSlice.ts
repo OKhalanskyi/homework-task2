@@ -1,5 +1,6 @@
 import {ITodo} from "../../models/ITodo";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {getDates} from "../../models/ITodo";
 
 interface TodosState{
     todos:ITodo[]
@@ -7,9 +8,9 @@ interface TodosState{
 
 
 const initialState: TodosState = {
-    todos:[{id:"12",name:"qaz",createdAt:123,category:"wsx",content:"edc",dates:["qwe"],isArchive:false},
-        {id:"1",name:"qaz",createdAt:123,category:"wsx",content:"edc",dates:["qwe"],isArchive:true},
-        {id:"45",name:"qaz",createdAt:123,category:"wsx",content:"edc",dates:["qwe"],isArchive:true}]
+    todos:[{id:"12",name:"qaz",createdAt:"ee",category:"Task",content:"edc",dates:["qwe"],isArchive:false},
+        {id:"1",name:"qaz",createdAt:"22",category:"Task",content:"edc",dates:["qwe"],isArchive:true},
+        {id:"45",name:"qaz",createdAt:"344",category:"Task",content:"edc",dates:["qwe"],isArchive:true}]
 }
 
 const todoSlice = createSlice({
@@ -29,7 +30,8 @@ const todoSlice = createSlice({
             const {id,content} = action.payload
             const editTodo = state.todos.find(todo=> todo.id===id)
             if(editTodo){
-                editTodo.content= content
+                editTodo.content = content
+                editTodo.dates = getDates(editTodo.content)
             }
         },
 

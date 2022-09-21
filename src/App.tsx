@@ -2,12 +2,14 @@ import React from 'react';
 import './App.css';
 import TodoTable from "./components/TodoTable";
 import TodoForm from "./components/TodoForm";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <TodoTable archiveTable={false}/>
-      <TodoTable archiveTable={true}/>
+        <Header/>
+      <TodoTable notesTable={true}/>
+      <TodoTable notesTable={false}/>
         <TodoForm/>
     </div>
   );

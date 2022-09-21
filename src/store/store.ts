@@ -1,9 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
 import todoReducer from './slices/todoSlice'
+import tableReducer from "./slices/tableSlice";
 
 const store = configureStore({
     reducer:{
-        todos: todoReducer
+        todos: todoReducer,
+        tables: tableReducer
     }
 })
 export type RootState = ReturnType<typeof store.getState>
