@@ -4,6 +4,7 @@ import {createTodo} from "../../store/slices/todoSlice";
 import {v4 as uuid} from "uuid"
 import {getDates, setCreatedDate} from "../../models/ITodo";
 import {Category} from "../../models/ITodo";
+import styles from './TodoForm.module.scss'
 
 const TodoForm = () => {
     const dispatch = useDispatch()
@@ -44,14 +45,20 @@ const TodoForm = () => {
         }
 
     return (
-        <form onSubmit={submitHandler}>
-            {inputError&&<h1>incorrect</h1>}
-            <input type="text" value={name} onChange={inputNameHandler}/>
-            <input type="radio" value="Task" checked={isSelected("Task")} onChange={inputCategoryHandler}/>
-            <input type="radio" value="Thought" checked={isSelected("Thought")} onChange={inputCategoryHandler}/>
-            <input type="radio" value="Idea" checked={isSelected("Idea")} onChange={inputCategoryHandler}/>
-            <input type="text" value={content} onChange={inputContentHandler}/>
-            <button type={"submit"}>create</button>
+        <form className={styles.form} onSubmit={submitHandler}>
+            <h1>Create notes</h1>
+            {inputError&&<h2>input the name </h2>}
+            <input className={styles.inputName} type="text" value={name} onChange={inputNameHandler}/>
+            <div className={styles.inputToolbar}>
+                <input id="i1" type="radio" value="Task" checked={isSelected("Task")} onChange={inputCategoryHandler}/>
+                <label htmlFor="i1">Task</label>
+                <input id="i2" type="radio" value="Thought" checked={isSelected("Thought")} onChange={inputCategoryHandler}/>
+                <label htmlFor="i2">Thought</label>
+                <input id="i3" type="radio" value="Idea" checked={isSelected("Idea")} onChange={inputCategoryHandler}/>
+                <label htmlFor="i3">Idea</label>
+            </div>
+            <input className={styles.inputContent} type="text" value={content} onChange={inputContentHandler}/>
+            <button className={styles.btnCreate} type={"submit"}>create</button>
         </form>
     );
     }

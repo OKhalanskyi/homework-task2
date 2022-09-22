@@ -1,0 +1,80 @@
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  position: fixed;
+  margin-right: 105px;
+}
+
+.inputName{
+  width:100%;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:2px solid lightgray;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+.inputToolbar{
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.inputToolbar input[type="radio"] {
+  display: none;
+}
+.inputToolbar label {
+  display: inline-block;
+  padding: 2px 9px;
+  cursor: pointer;
+  border: 1px solid #DAD0FF;
+  border-radius: 8px;
+}
+.inputToolbar input[type="radio"]:checked+label {
+  background-color: lightblue;
+  border: 1px solid blue;
+}
+.inputToolbar label:hover {
+  background-color: lightblue;
+  border: 1px solid blue;
+}
+
+.inputContent{
+  width:100%;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:2px solid lightgray;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+.btnCreate{
+  display:inline-block;
+  padding:0.5em 3em;
+  border:2px solid #1877F2;
+  box-sizing: border-box;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-family:'Roboto',sans-serif;
+  font-weight:700;
+  color:#1877F2;
+  text-align:center;
+  transition: all 0.15s;
+  border-radius: 8px;
+}
+.btnCreate:hover{
+  color:#AAC9FF;
+  border-color:#AAC9FF;
+}
+.btnCreate:active{
+  color:#BBBBBB;
+  border-color:#BBBBBB;
+}
+
+h2{
+  color: red;
+}

@@ -1,0 +1,106 @@
+.table{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+.tableHeader{
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  background-color: lightgray;
+  border: 1px solid lightgray;
+  height: 65px;
+  align-items: center;
+}
+.item1{
+  flex-basis: 16%;
+}
+.item{
+  background-color: lightgray;
+  font-weight:400;
+  font-family:'Roboto',sans-serif;
+  font-size: 26px;
+}
+
+.item2{
+  flex-basis: 16%;
+}
+.item3{
+  flex-basis: 16%;
+}
+.item4{
+  flex-basis: 20%;
+}
+.item5{
+  flex-basis: 16%;
+}
+.item6{
+  flex-basis: 16%;
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+  .images{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    .archive{
+      background-color: lightgray;
+    }
+
+    .delete{
+      background-color: lightgray;
+    }
+  }
+}
+.item7{
+  flex: 1;
+}
+.item8{
+  flex: 1;
+}
+.item9{
+  flex: 1;
+}
+
+
+.tableRaw{
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid lightgray;
+  height: 60px;
+  align-items: center;
+  .tableItem{
+    background-color: white;
+    font-size: 20px;
+    flex: 1;
+  }
+  .firstElem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+  }
+  span{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    img{
+      background-color: white;
+    }
+  }
+  h3{
+    background-color: white;
+    padding-left: 20px;
+  }
+}
+
+.emptyList{
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  margin-bottom: 15px;
+}

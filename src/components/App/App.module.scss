@@ -1,0 +1,66 @@
+.app{
+  display: flex;
+  flex-direction: row;
+}
+.table{
+  display: flex;
+  flex-direction:column;
+  flex: 3;
+  margin-top: 40px;
+
+
+  .header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .tables{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container{
+      min-width: 80%;
+      .createBtn{
+        display: flex;
+        justify-content: center;
+        height: 53px;
+        align-items: center;
+        margin-bottom: 20px;
+        .btn{
+          display:inline-block;
+          padding:0.5em 3em;
+          border:2px solid #1877F2;
+          box-sizing: border-box;
+          text-decoration:none;
+          text-transform:uppercase;
+          font-family:'Roboto',sans-serif;
+          font-weight:700;
+          color:#1877F2;
+          text-align:center;
+          transition: all 0.15s;
+          border-radius: 8px;
+        }
+        .btn:hover{
+          color:#AAC9FF;
+          border-color:#AAC9FF;
+        }
+        .btn:active{
+          color:#BBBBBB;
+          border-color:#BBBBBB;
+        }
+    }
+
+    }
+  }
+
+}
+.form{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  height: 400px;
+}
+
+
